@@ -18,7 +18,7 @@ const {
   createorder,
   getAllorder,
 } = require("../controller/user");
-const { CreateResponse } = require("../controller/response");
+const { CreateResponse, getAllResponse } = require("../controller/response");
 const router = express.Router();
 
 router.post("/api/staff", createStaff);
@@ -31,6 +31,7 @@ router.post("/api/login", userLoginValidator, loginUser);
 router.post("/api/order", createorder);
 router.get("/api/order", getAllorder);
 router.post("/hr/response", CreateResponse);
+router.get("/hr/response", getAllResponse);
 
 // router.post("/api/user", isAuthenticated, getAllusers);
 module.exports = router;
