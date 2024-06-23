@@ -16,7 +16,6 @@ app.use(
     origin: "*",
   })
 );
-
 const CreateResponse = async (req, res) => {
   try {
     const data = await responseModel.create(req.body);
