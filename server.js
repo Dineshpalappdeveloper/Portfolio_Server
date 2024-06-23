@@ -13,10 +13,6 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors()); // Consider specifying origin based on your deployment needs
 
-app.get("/", (req, res) => {
-  res.send("Welcome Back");
-});
-
 const CreateResponse = async (req, res) => {
   try {
     const data = await responseModel.create(req.body);
@@ -35,9 +31,9 @@ const getAllResponse = async (req, res) => {
   }
 };
 
-app.get("/hr", getAllResponse);
-app.post("/hr", CreateResponse);
-app.use("/", GlobalRoutes);
+app.get("/", getAllResponse);
+app.post("/", CreateResponse);
+// app.use("/", GlobalRoutes);
 
 const startConnection = async () => {
   try {
