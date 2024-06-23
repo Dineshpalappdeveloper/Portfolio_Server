@@ -1,5 +1,4 @@
 const responseModel = require("../models/responseModel");
-const ObjectId = require("mongoose").Types.ObjectId;
 const CreateResponse = async (req, res) => {
   try {
     const data = await responseModel.create(req.body);

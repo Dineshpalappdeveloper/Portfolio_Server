@@ -30,8 +30,8 @@ const router = express.Router();
 // router.post("/api/login", userLoginValidator, loginUser);
 // router.post("/api/order", createorder);
 // router.get("/api/order", getAllorder);
-router.post("/hr/response", CreateResponse);
-router.get("/hr/response", getAllResponse);
+// router.post("/hr/response", CreateResponse);
+// router.get("/hr/response", getAllResponse);
 
 // router.post("/api/user", isAuthenticated, getAllusers);
 module.exports = router;
